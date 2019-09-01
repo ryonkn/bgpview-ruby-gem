@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require 'simplecov'
+require 'coveralls'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
   [
     SimpleCov::Formatter::HTMLFormatter
-    # Coveralls::SimpleCov::Formatter
   ]
 )
+Coveralls.wear!
 
 SimpleCov.start do
   add_filter '/spec/'
