@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bgpview.io/asn/2515/prefixes
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.6.4 (2019-08-28))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 31 Aug 2019 09:29:17 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Aug 2019 09:29:17 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d0ca08b6a4ea3d697e4524041e7bd9d991567243757; expires=Sun, 30-Aug-20
+        09:29:17 GMT; path=/; domain=.bgpview.io; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, private
+      Access-Control-Allow-Origin:
+      - "*"
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50edfaab8be5946d-NRT
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","status_message":"Query was successful","data":{"ipv4_prefixes":[{"prefix":"103.131.194.0\/23","ip":"103.131.194.0","cidr":23,"roa_status":"None","name":"JPNICNET-SPI-CIDR-BLK-JP","description":"Japan
+        Network Information Center","country_code":"JP","parent":{"prefix":"103.131.194.0\/23","ip":"103.131.194.0","cidr":23,"rir_name":"APNIC","allocation_status":"unknown"}},{"prefix":"192.41.192.0\/24","ip":"192.41.192.0","cidr":24,"roa_status":"None","name":"JPNICNET-CIDR-BLK-JP","description":"Japan
+        Network Information Center","country_code":"JP","parent":{"prefix":"192.41.192.0\/24","ip":"192.41.192.0","cidr":24,"rir_name":"APNIC","allocation_status":"unknown"}},{"prefix":"202.12.30.0\/24","ip":"202.12.30.0","cidr":24,"roa_status":"None","name":"JPNICNET-CIDR-BLK-JP","description":"Japan
+        Network Information Center","country_code":"JP","parent":{"prefix":"202.12.30.0\/24","ip":"202.12.30.0","cidr":24,"rir_name":"APNIC","allocation_status":"unknown"}},{"prefix":"211.120.240.0\/21","ip":"211.120.240.0","cidr":21,"roa_status":"None","name":"ipv4exh-lab-CIDR-BLK-JP","description":"Japan
+        Network Information Center","country_code":"JP","parent":{"prefix":"211.120.0.0\/13","ip":"211.120.0.0","cidr":13,"rir_name":"APNIC","allocation_status":"unknown"}}],"ipv6_prefixes":[{"prefix":"2001:dc2::\/32","ip":"2001:dc2::","cidr":32,"roa_status":"None","name":"JPNIC-CIDR-BLK-JP","description":"Japan
+        Network Information Center","country_code":"JP","parent":{"prefix":"2001:dc1::\/32","ip":"2001:dc1::","cidr":32,"rir_name":"APNIC","allocation_status":"unknown"}},{"prefix":"2001:fa0::\/32","ip":"2001:fa0::","cidr":32,"roa_status":"None","name":"ipv4exh-lab-CIDR-BLK-JP","description":"Japan
+        Network Information Center","country_code":"JP","parent":{"prefix":"2001:fa0::\/32","ip":"2001:fa0::","cidr":32,"rir_name":"APNIC","allocation_status":"unknown"}}]},"@meta":{"time_zone":"UTC","api_version":1,"execution_time":"13.63
+        ms"}}'
+    http_version: 
+  recorded_at: Sat, 31 Aug 2019 09:29:18 GMT
+recorded_with: VCR 5.0.0

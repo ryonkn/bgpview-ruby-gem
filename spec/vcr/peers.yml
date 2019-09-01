@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bgpview.io/asn/2515/peers
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.6.4 (2019-08-28))
+      Accept:
+      - "*/*"
+      Date:
+      - Sat, 31 Aug 2019 09:29:16 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 31 Aug 2019 09:29:17 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d8db06f919a973be41597deeea5c994c31567243756; expires=Sun, 30-Aug-20
+        09:29:16 GMT; path=/; domain=.bgpview.io; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, private
+      Access-Control-Allow-Origin:
+      - "*"
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 50edfaa69a87a516-NRT
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","status_message":"Query was successful","data":{"ipv4_peers":[{"asn":8220,"name":"COLT","description":"COLT
+        Technology Services Group Limited","country_code":"GB"},{"asn":2518,"name":"APNIC-AS-X-BLOCK","description":"Asia
+        Pacific Network Information Centre","country_code":"AU"},{"asn":24482,"name":"SGGS-AS-AP","description":"SG.GS","country_code":"SG"},{"asn":2497,"name":"IIJ","description":"Internet
+        Initiative Japan Inc.","country_code":"JP"},{"asn":6939,"name":"HURRICANE","description":"Hurricane
+        Electric LLC","country_code":"US"},{"asn":17639,"name":"CONVERGE-AS","description":"Converge
+        ICT Solutions Inc.","country_code":"PH"},{"asn":7514,"name":"MEX","description":"Computer
+        Engineering & Consulting, Ltd.","country_code":"JP"},{"asn":25152,"name":"K-ROOT-SERVER","description":"Reseaux
+        IP Europeens Network Coordination Centre (RIPE NCC)","country_code":"EU"},{"asn":4777,"name":"APNIC-NSPIXP2-AS","description":"Asia
+        Pacific Network Information Centre","country_code":"JP"}],"ipv6_peers":[{"asn":24482,"name":"SGGS-AS-AP","description":"SG.GS","country_code":"SG"},{"asn":6939,"name":"HURRICANE","description":"Hurricane
+        Electric LLC","country_code":"US"},{"asn":2497,"name":"IIJ","description":"Internet
+        Initiative Japan Inc.","country_code":"JP"},{"asn":2518,"name":"APNIC-AS-X-BLOCK","description":"Asia
+        Pacific Network Information Centre","country_code":"AU"},{"asn":8220,"name":"COLT","description":"COLT
+        Technology Services Group Limited","country_code":"GB"},{"asn":2500,"name":"APNIC-AS-X-BLOCK","description":"Asia
+        Pacific Network Information Centre","country_code":"AU"},{"asn":25152,"name":"K-ROOT-SERVER","description":"Reseaux
+        IP Europeens Network Coordination Centre (RIPE NCC)","country_code":"EU"},{"asn":18403,"name":"FPT-AS-AP","description":"The
+        Corporation for Financing & Promoting Technology","country_code":"VN"},{"asn":17639,"name":"CONVERGE-AS","description":"Converge
+        ICT Solutions Inc.","country_code":"PH"},{"asn":7660,"name":"APAN-JP","description":"Asia
+        Pacific Advanced Network - Japan","country_code":"JP"}]},"@meta":{"time_zone":"UTC","api_version":1,"execution_time":"9.92
+        ms"}}'
+    http_version: 
+  recorded_at: Sat, 31 Aug 2019 09:29:17 GMT
+recorded_with: VCR 5.0.0

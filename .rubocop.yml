@@ -1,0 +1,14 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'bgpview.gemspec'
+
+Style/ClassVars:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MissingRespondToMissing:
+  Enabled: false
