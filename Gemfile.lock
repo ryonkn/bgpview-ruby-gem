@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bgpview (0.1.0)
+    bgpview (0.1.1)
       httpclient (~> 2.8)
 
 GEM
