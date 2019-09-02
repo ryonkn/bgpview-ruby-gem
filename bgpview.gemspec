@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'A Ruby wrapper for BGPView API'
   spec.description   = 'A Ruby wrapper for BGPView API'
-  spec.homepage      = 'https://github.com/ryonkn/bgpview'
+  spec.homepage      = 'https://github.com/ryonkn/bgpview-ruby-gem'
   spec.license       = 'MIT'
 
   spec.metadata['homepage_uri'] = spec.homepage
