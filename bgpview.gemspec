@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'webmock'
-  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'coveralls', '~> 0.8.23'
 
   spec.add_dependency 'httpclient', '~> 2.8'
 end
