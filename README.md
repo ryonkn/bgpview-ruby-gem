@@ -2,7 +2,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/bgpview.svg)](https://badge.fury.io/rb/bgpview)
 [![Build Status](https://travis-ci.org/ryonkn/bgpview-ruby-gem.svg)](https://travis-ci.org/ryonkn/bgpview-ruby-gem)
-[![Coverage Status](https://coveralls.io/repos/github/ryonkn/bgpview-ruby-gem/badge.svg)](https://coveralls.io/github/ryonkn/bgpview-ruby-gem)
+[![Coverage Status](https://coveralls.io/repos/github/ryonkn/bgpview-ruby-gem/badge.svg?branch=master)](https://coveralls.io/github/ryonkn/bgpview-ruby-gem?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/733fa73152c49837d658/maintainability)](https://codeclimate.com/github/ryonkn/bgpview-ruby-gem/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/733fa73152c49837d658/test_coverage)](https://codeclimate.com/github/ryonkn/bgpview-ruby-gem/test_coverage)
 
 A Ruby wrapper for BGPView API
 
