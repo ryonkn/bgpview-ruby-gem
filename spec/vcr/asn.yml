@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bgpview.io/asn/2515
+    uri: https://api.bgpview.io/asn/7511
     body:
       encoding: UTF-8
       string: ''
@@ -12,14 +12,14 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Sat, 31 Aug 2019 09:29:14 GMT
+      - Wed, 04 Sep 2019 03:34:20 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 31 Aug 2019 09:29:15 GMT
+      - Wed, 04 Sep 2019 03:34:21 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dc906a8834115518d1d6bd0f4c06ab1661567243754; expires=Sun, 30-Aug-20
-        09:29:14 GMT; path=/; domain=.bgpview.io; HttpOnly
+      - __cfduid=d3c55ae94eada591ecabd24f83b11b8371567568060; expires=Thu, 03-Sep-20
+        03:34:20 GMT; path=/; domain=.bgpview.io; HttpOnly
       Vary:
       - Accept-Encoding
       Cache-Control:
@@ -40,16 +40,15 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 50edfa9c6ef26ef1-NRT
+      - 510ce83d0a3c94cd-NRT
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"asn":2515,"name":"APNIC-AS-X-BLOCK","description_short":"Asia
-        Pacific Network Information Centre","description_full":["Asia Pacific Network
-        Information Centre"],"country_code":"AU","website":null,"email_contacts":[],"abuse_contacts":[],"looking_glass":null,"traffic_estimation":"20-100Mbps","traffic_ratio":"Mostly
-        Outbound","owner_address":["PO Box 3646","South Brisbane","QLD","4101","AU"],"rir_allocation":{"rir_name":null,"country_code":null,"date_allocated":null,"allocation_status":"assigned"},"iana_assignment":{"assignment_status":"assigned","description":"Assigned
-        by ARIN","whois_server":"whois.arin.net","date_assigned":null},"date_updated":"2019-08-27
-        21:45:26"},"@meta":{"time_zone":"UTC","api_version":1,"execution_time":"73.85
+      string: '{"status":"ok","status_message":"Query was successful","data":{"asn":7511,"name":"SYNAPSE","description_short":"SYNAPSE
+        Co.,Ltd.","description_full":["SYNAPSE Co.,Ltd."],"country_code":"JP","website":"https:\/\/www.synapse.jp","email_contacts":[],"abuse_contacts":[],"looking_glass":null,"traffic_estimation":"5-10Gbps","traffic_ratio":"Mostly
+        Inbound","owner_address":[],"rir_allocation":{"rir_name":null,"country_code":null,"date_allocated":null,"allocation_status":"assigned"},"iana_assignment":{"assignment_status":"assigned","description":"Assigned
+        by APNIC","whois_server":"whois.apnic.net","date_assigned":null},"date_updated":"2019-08-27
+        21:46:38"},"@meta":{"time_zone":"UTC","api_version":1,"execution_time":"75.44
         ms"}}'
     http_version: 
-  recorded_at: Sat, 31 Aug 2019 09:29:15 GMT
+  recorded_at: Wed, 04 Sep 2019 03:34:21 GMT
 recorded_with: VCR 5.0.0

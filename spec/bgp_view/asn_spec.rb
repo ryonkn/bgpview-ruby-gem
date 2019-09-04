@@ -3,7 +3,8 @@
 RSpec.describe BGPView::Asn do # rubocop:disable Metrics/BlockLength
   before { described_class.class_variable_set :@@cache, {} }
 
-  let(:find_as) { described_class.find(2515) }
+  let(:find_as) { described_class.find(7511) }
+  let!(:find_or_create_as) { described_class.find_or_create(7511, 'SYNAPSE') }
 
   describe '.find' do
     it 'success', vcr: { cassette_name: 'asn' } do
@@ -12,36 +13,34 @@ RSpec.describe BGPView::Asn do # rubocop:disable Metrics/BlockLength
   end
 
   describe '.find_or_create' do
-    let(:as) { described_class.find_or_create(2515, 'JPNIC') }
-
-    it 'was valid class' do
-      expect(as).to be_instance_of(described_class)
+    it 'success' do
+      expect(find_or_create_as).to be_instance_of(described_class)
     end
 
-    it 'was valid number' do
-      expect(as.number).to eq(2515)
+    it 'was valid AS number' do
+      expect(find_or_create_as.number).to eq(7511)
     end
 
     it 'was valid name' do
-      expect(as.name).to eq('JPNIC')
+      expect(find_or_create_as.name).to eq('SYNAPSE')
     end
   end
 
   describe '#name' do
     it 'was valid', vcr: { cassette_name: 'asn' } do
-      expect(find_as.name).to eq('APNIC-AS-X-BLOCK')
+      expect(find_as.name).to eq('SYNAPSE')
     end
   end
 
   describe '#number' do
     it 'was valid', vcr: { cassette_name: 'asn' } do
-      expect(find_as.number).to eq(2515)
+      expect(find_as.number).to eq(7511)
     end
   end
 
   describe '#method_missing' do
     it 'of country_code was valid', vcr: { cassette_name: 'asn' } do
-      expect(find_as.country_code).to eq('AU')
+      expect(find_as.country_code).to eq('JP')
     end
 
     it 'of not member was invalid', vcr: { cassette_name: 'asn' } do
