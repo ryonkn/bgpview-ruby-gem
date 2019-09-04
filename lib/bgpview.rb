@@ -4,7 +4,7 @@ require 'bgpview/version'
 require 'bgpview/asn'
 
 module BGPView
-  def self.find(number = 0)
+  def self.asn(number = 0)
     BGPView::Asn.find(number)
   end
 end

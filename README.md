@@ -34,7 +34,7 @@ require 'bgpview'
 
 ### ASN
 ```ruby
-as7511 = BGPView.find(7511)       # BGPView::Asn instance
+as7511 = BGPView.asn(7511)        # BGPView::Asn instance
 as7511.name                       # => "SYNAPSE"
 as7511.website                    # => "https://www.synapse.jp"
 as7511.traffic_estimation         # => "5-10Gbps"
