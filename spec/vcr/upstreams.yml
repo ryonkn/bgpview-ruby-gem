@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bgpview.io/asn/2515/upstreams
+    uri: https://api.bgpview.io/asn/7511/upstreams
     body:
       encoding: UTF-8
       string: ''
@@ -12,14 +12,14 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Sat, 31 Aug 2019 09:29:15 GMT
+      - Wed, 04 Sep 2019 03:34:21 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 31 Aug 2019 09:29:16 GMT
+      - Wed, 04 Sep 2019 03:34:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d3eb5900487de0532b3480a16780301f61567243755; expires=Sun, 30-Aug-20
-        09:29:15 GMT; path=/; domain=.bgpview.io; HttpOnly
+      - __cfduid=df33b467cc579f12d272d96353a7e1a271567568061; expires=Thu, 03-Sep-20
+        03:34:21 GMT; path=/; domain=.bgpview.io; HttpOnly
       Vary:
       - Accept-Encoding
       Cache-Control:
@@ -40,16 +40,15 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 50edfaa20c2aa5ac-NRT
+      - 510ce842ff4b944f-NRT
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"ipv4_upstreams":[{"asn":2518,"name":"APNIC-AS-X-BLOCK","description":"Asia
-        Pacific Network Information Centre","country_code":"AU"},{"asn":2497,"name":"IIJ","description":"Internet
-        Initiative Japan Inc.","country_code":"JP"},{"asn":7514,"name":"MEX","description":"Computer
-        Engineering & Consulting, Ltd.","country_code":"JP"}],"ipv6_upstreams":[{"asn":2518,"name":"APNIC-AS-X-BLOCK","description":"Asia
-        Pacific Network Information Centre","country_code":"AU"},{"asn":2497,"name":"IIJ","description":"Internet
-        Initiative Japan Inc.","country_code":"JP"}],"ipv4_graph":"https:\/\/api.bgpview.io\/assets\/graphs\/AS2515_IPv4.svg","ipv6_graph":"https:\/\/api.bgpview.io\/assets\/graphs\/AS2515_IPv6.svg","combined_graph":"https:\/\/api.bgpview.io\/assets\/graphs\/AS2515_Combined.svg"},"@meta":{"time_zone":"UTC","api_version":1,"execution_time":"8.92
+      string: '{"status":"ok","status_message":"Query was successful","data":{"ipv4_upstreams":[{"asn":7514,"name":"MEX","description":"Computer
+        Engineering & Consulting, Ltd.","country_code":"JP"},{"asn":17676,"name":"GIGAINFRA","description":"Softbank
+        BB Corp.","country_code":"JP"}],"ipv6_upstreams":[{"asn":7514,"name":"MEX","description":"Computer
+        Engineering & Consulting, Ltd.","country_code":"JP"},{"asn":17676,"name":"GIGAINFRA","description":"Softbank
+        BB Corp.","country_code":"JP"}],"ipv4_graph":"https:\/\/api.bgpview.io\/assets\/graphs\/AS7511_IPv4.svg","ipv6_graph":"https:\/\/api.bgpview.io\/assets\/graphs\/AS7511_IPv6.svg","combined_graph":"https:\/\/api.bgpview.io\/assets\/graphs\/AS7511_Combined.svg"},"@meta":{"time_zone":"UTC","api_version":1,"execution_time":"68.99
         ms"}}'
     http_version: 
-  recorded_at: Sat, 31 Aug 2019 09:29:16 GMT
+  recorded_at: Wed, 04 Sep 2019 03:34:22 GMT
 recorded_with: VCR 5.0.0

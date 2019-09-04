@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
 RSpec.describe BGPView::Prefixes do
-  let(:prefixes) { described_class.find(2515) }
+  let!(:prefixes) { described_class.find(7511) }
+  let!(:as7511_prefixes) do
+    ['103.53.120.0/22', '110.92.32.0/19', '124.146.64.0/19',
+     '124.146.96.0/19', '202.208.160.0/19', '202.95.32.0/19',
+     '203.111.192.0/20', '203.140.160.0/20', '203.145.96.0/20',
+     '203.147.112.0/20', '210.146.80.0/20', '210.237.32.0/19',
+     '219.100.8.0/22']
+  end
 
   describe '.find' do
     it 'success', vcr: { cassette_name: 'prefixes' } do
@@ -10,18 +17,15 @@ RSpec.describe BGPView::Prefixes do
   end
 
   describe '#ipv4' do
-    it 'was valid prefix', vcr: { cassette_name: 'prefixes' } do
-      expect(prefixes.ipv4.map(&:prefix)).to match_array(
-        ['103.131.194.0/23', '192.41.192.0/24', '202.12.30.0/24',
-         '211.120.240.0/21']
-      )
+    it 'was valid prefixes', vcr: { cassette_name: 'prefixes' } do
+      expect(prefixes.ipv4.map(&:prefix)).to match_array(as7511_prefixes)
     end
   end
 
   describe '#ipv6' do
-    it 'was valid prefix', vcr: { cassette_name: 'prefixes' } do
+    it 'was valid prefixes', vcr: { cassette_name: 'prefixes' } do
       expect(prefixes.ipv6.map(&:prefix)).to match_array(
-        ['2001:dc2::/32', '2001:fa0::/32']
+        ['2401:c800::/32']
       )
     end
   end
