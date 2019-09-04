@@ -8,6 +8,7 @@
 
 A Ruby wrapper for BGPView API
 
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -24,16 +25,48 @@ Or install it yourself as:
 
     $ gem install bgpview
 
+
 ## Usage
 
 ```ruby
 require 'bgpview'
-
-as2515 = BGPView.find(2515)
-as2515.upstreams
-as2515.peers
-as2515.prefixes
 ```
+
+### ASN
+```ruby
+as7511 = BGPView.find(7511)       # BGPView::Asn instance
+as7511.name                       # => "SYNAPSE"
+as7511.website                    # => "https://www.synapse.jp"
+as7511.traffic_estimation         # => "5-10Gbps"
+```
+
+### ASN Prefixes
+```ruby
+prefixes = as7511.prefixes        # BGPView::Prefixes instance
+prefixes.ipv4                     # array of IPv4 prefixes
+prefixes.ipv6                     # array of IPv6 prefixes
+prefixes.ipv4.map(&:prefix)       # => ["103.53.120.0/22", "110.92.32.0/19", ...]
+prefixes.ipv6.map(&:prefix)       # => ["2401:c800::/32"]
+```
+
+### ASN Peers
+```ruby
+peers = as7511.prefixes           # BGPView::Peers instance
+peers.ipv4                        # array of IPv4 peers BGPView::Asn instances
+peers.ipv6                        # array of IPv6 peers BGPView::Asn instances
+peers.ipv4.map(&:number)          # => [7514, 8220, 17676, 45687, 24482, 7517, 4637, 6939, 23815, 64050]
+peers.ipv6.map(&:name             # => ["HURRICANE", "MEX", "SGGS-AS-AP", "GIGAINFRA", "COLT", "FPT-AS-AP"]
+```
+
+### ASN Upstreams
+```ruby
+upstreams = as7511.upstreams      # BGPView::Upstreams instance
+upstreams.ipv4                    # array of IPv4 upstream instances
+upstreams.ipv6                    # array of IPv6 upstream instances
+upstreams.ipv4.map(&:number)      # => [7514, 17676]
+upstreams.ipv6.map(&:name)        # => ["MEX", "GIGAINFRA"]
+```
+
 
 ## Contributing
 
@@ -43,9 +76,11 @@ as2515.prefixes
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
 
 ## Code of Conduct
 
