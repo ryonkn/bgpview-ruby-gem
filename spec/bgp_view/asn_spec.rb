@@ -56,6 +56,14 @@ RSpec.describe BGPView::Asn do # rubocop:disable Metrics/BlockLength
     end
   end
 
+  describe '#downstreams' do
+    it 'success', vcr: { cassette_name: 'asn' } do
+      VCR.use_cassette 'downstreams' do
+        expect(find_as.downstreams).to be_instance_of(BGPView::Downstreams)
+      end
+    end
+  end
+
   describe '#peers' do
     it 'success', vcr: { cassette_name: 'asn' } do
       VCR.use_cassette 'peers' do

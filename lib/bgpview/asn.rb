@@ -2,6 +2,7 @@
 
 require 'bgpview/api'
 require 'bgpview/upstreams'
+require 'bgpview/downstreams'
 require 'bgpview/peers'
 require 'bgpview/prefixes'
 require 'bgpview/number'
@@ -43,6 +44,10 @@ module BGPView
 
     def upstreams
       BGPView::Upstreams.find(@number)
+    end
+
+    def downstreams
+      BGPView::Downstreams.find(@number)
     end
 
     def peers
