@@ -67,6 +67,14 @@ upstreams.ipv4.map(&:number)      # => [7514, 17676]
 upstreams.ipv6.map(&:name)        # => ["MEX", "GIGAINFRA"]
 ```
 
+### ASN Downstreams
+```ruby
+downstreams = as7511.downstreams  # BGPView::Downstreams instance
+downstreams.ipv4                  # array of IPv4 downstream instances
+downstreams.ipv6                  # array of IPv6 downstream instances
+downstreams.ipv4.map(&:number)    # => [7517, 45687]
+downstreams.ipv6.map(&:name)      # => []
+```
 
 ## Contributing
 
