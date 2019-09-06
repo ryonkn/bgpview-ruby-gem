@@ -51,7 +51,7 @@ prefixes.ipv6.map(&:prefix)       # => ["2401:c800::/32"]
 
 ### ASN Peers
 ```ruby
-peers = as7511.prefixes           # BGPView::Peers instance
+peers = as7511.peers              # BGPView::Peers instance
 peers.ipv4                        # array of IPv4 peers BGPView::Asn instances
 peers.ipv6                        # array of IPv6 peers BGPView::Asn instances
 peers.ipv4.map(&:number)          # => [7514, 8220, 17676, 45687, 24482, 7517, 4637, 6939, 23815, 64050]
