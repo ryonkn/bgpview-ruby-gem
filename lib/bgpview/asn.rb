@@ -66,7 +66,7 @@ module BGPView
     end
 
     def call_api
-      result = BGPView::API.call(@number)
+      result = BGPView::API.call("asn/#{@number}")
       @name = result[:data][:name]
       @data = result[:data]
     end
