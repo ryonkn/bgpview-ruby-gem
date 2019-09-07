@@ -12,7 +12,7 @@ module BGPView
     def initialize(number)
       BGPView::Number.check(number)
 
-      peers = BGPView::API.call("#{number}/peers")
+      peers = BGPView::API.call("asn/#{number}/peers")
 
       @ipv4 = extract_as(peers, 'ipv4')
       @ipv6 = extract_as(peers, 'ipv6')

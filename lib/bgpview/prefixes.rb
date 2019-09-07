@@ -13,7 +13,7 @@ module BGPView
     def initialize(number)
       BGPView::Number.check(number)
 
-      prefixes = BGPView::API.call("#{number}/prefixes")
+      prefixes = BGPView::API.call("asn/#{number}/prefixes")
 
       @ipv4 = extract_ip(prefixes, 'ipv4')
       @ipv6 = extract_ip(prefixes, 'ipv6')

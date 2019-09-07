@@ -6,7 +6,7 @@ require 'bgpview/error'
 
 module BGPView
   class API
-    API_BASE_URL = 'https://api.bgpview.io/asn/'
+    API_BASE_URL = 'https://api.bgpview.io/'
 
     def self.call(url)
       client = HTTPClient.new
