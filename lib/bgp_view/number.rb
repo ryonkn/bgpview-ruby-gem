@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bgpview/error'
+require 'bgp_view/error'
 
 module BGPView
   class Number

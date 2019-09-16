@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'bgpview/api'
-require 'bgpview/ip'
+require 'bgp_view/api'
+require 'bgp_view/ip'
 
 module BGPView
   class Prefixes

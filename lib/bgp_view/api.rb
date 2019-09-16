@@ -2,7 +2,7 @@
 
 require 'httpclient'
 require 'json'
-require 'bgpview/error'
+require 'bgp_view/error'
 
 module BGPView
   class API
