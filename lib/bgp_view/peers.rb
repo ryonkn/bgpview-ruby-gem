@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bgpview/api'
+require 'bgp_view/api'
 
 module BGPView
   class Peers

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'bgpview/api'
-require 'bgpview/upstreams'
-require 'bgpview/downstreams'
-require 'bgpview/peers'
-require 'bgpview/prefixes'
-require 'bgpview/number'
+require 'bgp_view/api'
+require 'bgp_view/upstreams'
+require 'bgp_view/downstreams'
+require 'bgp_view/peers'
+require 'bgp_view/prefixes'
+require 'bgp_view/number'
 
 module BGPView
   class Asn

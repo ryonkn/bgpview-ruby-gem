@@ -15,7 +15,7 @@ SimpleCov.start do
 end
 
 require 'bundler/setup'
-require 'bgpview'
+require 'bgp_view'
 require 'vcr'
 
 VCR.configure do |config|

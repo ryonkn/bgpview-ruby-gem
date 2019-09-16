@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'bgpview/api'
+require 'bgp_view/api'
 
 module BGPView
-  class Upstreams
+  class Downstreams
     @@cache = {}
 
     private_class_method :new
@@ -12,10 +12,10 @@ module BGPView
     def initialize(number)
       BGPView::Number.check(number)
 
-      upstreams = BGPView::API.call("asn/#{number}/upstreams")
+      downstreams = BGPView::API.call("asn/#{number}/downstreams")
 
-      @ipv4 = extract_as(upstreams, 'ipv4')
-      @ipv6 = extract_as(upstreams, 'ipv6')
+      @ipv4 = extract_as(downstreams, 'ipv4')
+      @ipv6 = extract_as(downstreams, 'ipv6')
 
       @@cache[number] = self
     end
@@ -26,8 +26,8 @@ module BGPView
 
     private
 
-    def extract_as(upstreams, version)
-      upstreams[:data]["#{version}_upstreams".to_sym].map do |as|
+    def extract_as(downstreams, version)
+      downstreams[:data]["#{version}_downstreams".to_sym].map do |as|
         BGPView::Asn.find_or_create(as[:asn], as[:name])
       end
     end
