@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe BGPView::Peers do # rubocop:disable Metrics/BlockLength
-  let!(:peers) { described_class.find(7511) }
+  let!(:asn) { BGPView::Asn.find_or_create(7511, 'SYNAPSE') }
+  let!(:peers) { described_class.find(asn) }
 
   describe '.find' do
     it 'success', vcr: { cassette_name: 'peers' } do
