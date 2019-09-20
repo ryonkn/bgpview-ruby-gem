@@ -20,8 +20,8 @@ module BGPView
       @@cache[number] = self
     end
 
-    def self.find(number)
-      @@cache.key?(number) ? @@cache[number] : new(number)
+    def self.find(asn)
+      @@cache.key?(asn.number) ? @@cache[asn.number] : new(asn.number)
     end
 
     private

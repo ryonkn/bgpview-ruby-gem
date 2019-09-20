@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe BGPView::Prefixes do
-  let!(:prefixes) { described_class.find(7511) }
+RSpec.describe BGPView::Prefixes do # rubocop:disable Metrics/BlockLength
+  let!(:asn) { BGPView::Asn.find_or_create(7511, 'SYNAPSE') }
+  let!(:prefixes) { described_class.find(asn) }
   let!(:as7511_prefixes) do
     ['103.53.120.0/22', '110.92.32.0/19', '124.146.64.0/19',
      '124.146.96.0/19', '202.208.160.0/19', '202.95.32.0/19',

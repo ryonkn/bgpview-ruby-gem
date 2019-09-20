@@ -43,19 +43,19 @@ module BGPView
     end
 
     def upstreams
-      BGPView::Upstreams.find(@number)
+      BGPView::Upstreams.find(self)
     end
 
     def downstreams
-      BGPView::Downstreams.find(@number)
+      BGPView::Downstreams.find(self)
     end
 
     def peers
-      BGPView::Peers.find(@number)
+      BGPView::Peers.find(self)
     end
 
     def prefixes
-      BGPView::Prefixes.find(@number)
+      BGPView::Prefixes.find(self)
     end
 
     private
