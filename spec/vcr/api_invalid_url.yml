@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bgpview.io/dummy
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.6.4 (2019-08-28))
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 20 Sep 2019 23:58:21 GMT
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 20 Sep 2019 23:58:22 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd687b099c07e00985abc7dea6496e59e1569023901; expires=Sat, 19-Sep-20
+        23:58:21 GMT; path=/; domain=.bgpview.io; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, private
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5197bf3af8c4db34-KIX
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>404 - Not Found.</title>
+
+                <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+                <style>
+                    html, body {
+                        height: 100%;
+                    }
+
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        color: #B0BEC5;
+                        display: table;
+                        font-weight: 100;
+                        font-family: 'Lato';
+                    }
+
+                    .container {
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    .content {
+                        text-align: center;
+                        display: inline-block;
+                    }
+
+                    .title {
+                        font-size: 72px;
+                        margin-bottom: 40px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="content">
+                        <div class="title">404 - Page Not Found.</div>
+                    </div>
+                </div>
+            </body>
+        </html>
+    http_version: 
+  recorded_at: Fri, 20 Sep 2019 23:58:22 GMT
+recorded_with: VCR 5.0.0

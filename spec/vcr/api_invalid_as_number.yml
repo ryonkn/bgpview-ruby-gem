@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bgpview.io/asn/-1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.6.4 (2019-08-28))
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 20 Sep 2019 23:59:33 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 Sep 2019 23:59:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d87795003d2de6fe0d2cd678bd93fd9b51569023973; expires=Sat, 19-Sep-20
+        23:59:33 GMT; path=/; domain=.bgpview.io; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, private
+      Access-Control-Allow-Origin:
+      - "*"
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5197c0fcd9a3ae73-KIX
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","status_message":"Could not find ASN","@meta":{"time_zone":"UTC","api_version":1,"execution_time":"8.77
+        ms"}}'
+    http_version: 
+  recorded_at: Fri, 20 Sep 2019 23:59:34 GMT
+recorded_with: VCR 5.0.0
