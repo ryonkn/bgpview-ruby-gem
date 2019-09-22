@@ -28,7 +28,7 @@ module BGPView
 
     def extract_as(peers, version)
       peers[:data]["#{version}_peers".to_sym].map do |as|
-        BGPView::Asn.find_or_create(as[:asn], as[:name])
+        BGPView::Asn.find(as[:asn], as[:name], fetch: false)
       end
     end
   end

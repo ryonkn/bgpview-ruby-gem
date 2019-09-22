@@ -14,24 +14,20 @@ module BGPView
     private_class_method :new
     attr_reader :number, :name
 
-    def initialize(number, name = '', detail: false)
+    def initialize(number, name = '', fetch: false)
       BGPView::Number.check(number)
 
       @number = number
       @name = name
       @data = {}
 
-      call_api if detail
+      fetch_data if fetch
 
       @@cache[number] = self
     end
 
-    def self.find(number)
-      @@cache.key?(number) ? @@cache[number] : new(number, detail: true)
-    end
-
-    def self.find_or_create(number, name)
-      @@cache.key?(number) ? @@cache[number] : new(number, name)
+    def self.find(number, name = '', fetch: true)
+      @@cache.key?(number) ? @@cache[number] : new(number, name, fetch: fetch)
     end
 
     def method_missing(method, *args)
@@ -61,11 +57,11 @@ module BGPView
     private
 
     def data
-      call_api if @data.empty?
+      fetch_data if @data.empty?
       @data
     end
 
-    def call_api
+    def fetch_data
       result = BGPView::API.call("asn/#{@number}")
       @name = result[:data][:name]
       @data = result[:data]

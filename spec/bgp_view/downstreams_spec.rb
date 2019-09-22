@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe BGPView::Downstreams do # rubocop:disable Metrics/BlockLength
-  let!(:asn) { BGPView::Asn.find_or_create(7511, 'SYNAPSE') }
+  let!(:asn) { BGPView::Asn.find(7511, 'SYNAPSE', fetch: false) }
   let!(:downstreams) { described_class.find(asn) }
 
   describe '.find' do
