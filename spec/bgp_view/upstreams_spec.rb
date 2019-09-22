@@ -2,23 +2,23 @@
 
 RSpec.describe BGPView::Upstreams do # rubocop:disable Metrics/BlockLength
   let!(:asn) { BGPView::Asn.find_or_create(7511, 'SYNAPSE') }
-  let!(:find_upstreams) { described_class.find(asn) }
+  let!(:upstreams) { described_class.find(asn) }
 
   describe '.find' do
     it 'success', vcr: { cassette_name: 'upstreams' } do
-      expect(find_upstreams).to be_instance_of(described_class)
+      expect(upstreams).to be_instance_of(described_class)
     end
   end
 
   describe '#ipv4' do
     it 'was valid AS numbers', vcr: { cassette_name: 'upstreams' } do
-      expect(find_upstreams.ipv4.map(&:number)).to match_array(
+      expect(upstreams.ipv4.map(&:number)).to match_array(
         [7514, 17_676]
       )
     end
 
     it 'was valid AS names', vcr: { cassette_name: 'upstreams' } do
-      expect(find_upstreams.ipv4.map(&:name)).to match_array(
+      expect(upstreams.ipv4.map(&:name)).to match_array(
         %w[GIGAINFRA MEX]
       )
     end
@@ -26,13 +26,13 @@ RSpec.describe BGPView::Upstreams do # rubocop:disable Metrics/BlockLength
 
   describe '#ipv6' do
     it 'was valid AS numbers', vcr: { cassette_name: 'upstreams' } do
-      expect(find_upstreams.ipv6.map(&:number)).to match_array(
+      expect(upstreams.ipv6.map(&:number)).to match_array(
         [7514, 17_676]
       )
     end
 
     it 'was valid AS names', vcr: { cassette_name: 'upstreams' } do
-      expect(find_upstreams.ipv6.map(&:name)).to match_array(
+      expect(upstreams.ipv6.map(&:name)).to match_array(
         %w[GIGAINFRA MEX]
       )
     end
