@@ -1,14 +1,18 @@
 name: Ruby
-on: [push]
+on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [ '2.5.x', '2.6.x' ]
     steps:
     - uses: actions/checkout@master
-    - name: Set up Ruby 2.6
+    - name: Setup Ruby 
       uses: actions/setup-ruby@v1
       with:
-        version: 2.6.x
+        ruby-version: ${{ matrix.ruby }}
+        architecture: 'x64'
     - name: Build
       run: |
         gem install bundler
@@ -16,4 +20,6 @@ jobs:
     - name: lint
       run: bundle exec rubocop
     - name: rspec
+      env:
+        CI: True
       run: bundle exec rspec
