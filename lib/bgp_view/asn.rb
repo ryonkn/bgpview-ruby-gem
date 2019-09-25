@@ -31,11 +31,9 @@ module BGPView
     end
 
     def method_missing(method, *args)
-      if data.key?(method.to_sym)
-        data[method.to_sym]
-      else
-        super
-      end
+      return data[method.to_sym] if data.key?(method.to_sym)
+
+      super
     end
 
     def upstreams
